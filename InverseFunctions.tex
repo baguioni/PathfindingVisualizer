@@ -1,0 +1,86 @@
+\author{Vincent Baguio}
+
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1 in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,enumerate,cleveref,graphicx,fancyhdr}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{subfiles}
+
+\newmdenv{chest}{}
+\pagestyle{empty}
+\fancyhf{}
+
+\rfoot{Page \thepage}
+\lhead{\scriptsize 2020-01-14}
+\rhead{\scriptsize MATH54}
+\begin{document}
+\thispagestyle{fancy}
+\begin{Large}\textbf{Inverse Functions}\end{Large} \\
+
+f(x) is the image of x under f while x is the pre-image f(x)\\
+
+\textbf{One-to-one Function}: $f(x_{1}) \neq f(x_{2})$ whenever $x_{1} \neq x_{2}$
+
+\textbf{Note: }Restrict the domain to make a non one-to-one function into a one-to-one function\\
+
+\textbf{Cancellation Equations:}
+\begin{align*}
+f^{-1}((x)) &= x, \forall x \exists A\\
+f(f^{-1}(x)) &= x, \forall x \exists B
+\end{align*}
+
+Quiz 1-16-2020
+
+\textbf{Solutions:}\\
+19. $h(x) = x + \sqrt{x}, h^{-1}(6)$
+
+\begin{align*}
+x + \sqrt{x} &= 6\\
+\sqrt{x} &=  6 - x\\
+x &= 36 - 12x + x^{2}\\
+0 &= 36 - 13x + x^{2}\\
+0 &= (9-x)(4-x)\\
+x = 4, x = 9
+\end{align*}
+
+if x = 4
+\begin{align*}
+h(4) &=  4 + \sqrt{4}\\ 
+&=  4 + 2 = 6
+\end{align*}
+
+if x = 9
+\begin{align*}
+h(9) &=  9 + \sqrt{9}\\
+&= 9 + 3 = 12
+\end{align*}
+Therefore x = 4 and $h^{-1}(6) = 4$\\
+
+27. $y = \frac{1-\sqrt{x}}{1+\sqrt{x}}$
+\begin{align*}
+y + y\sqrt{x} &= 1 - \sqrt{x}\\
+\sqrt{x} + y \sqrt{x} &= 1-y\\
+\sqrt{x}(1+y)&= 1-y\\
+\sqrt{x} &= \frac{1-y}{1+y}\\
+x &= \left(\frac{1-y}{1+y}\right) ^{2}\\
+y &= \left(\frac{1-x}{1+x}\right) ^{2}\\
+f^{-1}(x) &= \left(\frac{1-x}{1+x}\right) ^{2}
+\end{align*}
+
+40. $f(x)= 2x^{3} + 3x^{2} + 7x + 4, a = 4$\\
+$f'(x) = 6x^{2}	+ 6x + 7$\\
+\begin{align*}
+	(f^(-1))'(4) &= \frac{1}{f'(f^(-1)(4))}\\
+	2x^{3} + 3x^{2}	+7x + 4 &=  4\\
+	2x^{3} +3x^{2}	+7x &=  0\\
+	x(2x^{2} + 3x + 7) &= 0\\
+\end{align*}
+
+Therefore x = 4 and $f^{-1}(4) = 0$
+
+\begin{align*}
+&= \frac{1}{f^{-1}(0)}\\
+&= \frac{1}{6(0)^{2}+6(0)+7}\\
+&= (f^{-1})'(4)=\frac{1}{7}
+\end{align*}
+\end{document}
